@@ -1,11 +1,10 @@
-import { FC } from "react";
 import { IUser } from "types/types";
 
 interface UserListProps {
     users: IUser[]
 }
 
-const UserList: FC<UserListProps> = ({users: IUser[] }) => {
+const UserList = ({users }: UserListProps) => {
     return (
         <div>
             {users.map(user =>
