@@ -20,7 +20,7 @@ const ActionsList = () => {
   const { t } = useTranslation();
   return (
     <Page>
-        <Typography variant='h4' textAlign='center'>{t('select action')}</Typography>
+        <Typography variant='h4' textAlign='center'>{t('Hello')}</Typography>
         <Grid maxWidth='700px' paddingTop='20px' container spacing={2}>
           {ACTIONS.map((action) => {
             const { key, route } = action;

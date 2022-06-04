@@ -10,7 +10,7 @@ const StyledBox = styled(Box)({
   width:'100%',
   display: 'flex',
   flexDirection:'column',
-  alignItems:'center'
+  alignItems:'center',
 });
 
 const Page = ({ children }: Props) => {

@@ -45,6 +45,6 @@ const supportedLanguages = [
   },
 ];
 
-// const TON_WALLET_EXTENSION_URL  = 'https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd'
+//const TON_WALLET_EXTENSION_URL  = 'https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd'
 
 export { ROUTES, ACTIONS, supportedLanguages };
