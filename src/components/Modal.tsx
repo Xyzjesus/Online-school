@@ -2,22 +2,26 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { ReactNode } from "react";
 
-export interface Props {
-  open: boolean;
+
+export interface ModalProps{
+  isOpen: boolean;
   onClose: () => void;
   title?: string;
   children: ReactNode;
 }
 
-function Modal(props: Props) {
-  const { onClose, open, title, children } = props;
 
-  const handleClose = () => {
-    onClose();
-  };
+
+// do not use FC -> bad practice 
+const Modal = ({onClose, isOpen, title, children}: ModalProps) => {
+  // const { onClose, isOpen, title, children } = props;
+
+  // const handleClose = () => {
+  //   onClose();
+  // };
 
   return (
-    <Dialog fullWidth onClose={handleClose} open={open}>
+    <Dialog fullWidth onClose={() => onClose()} open={isOpen}>
       {title && <DialogTitle>{title}</DialogTitle>}
       {children}
     </Dialog>
