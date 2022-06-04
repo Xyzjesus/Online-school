@@ -94,7 +94,7 @@ const WalletConnect = () => {
       <Button onClick={() => setOpen(true)} variant="contained">
         {t("connect wallet")}
       </Button>
-      <Modal open={open} onClose={() => setOpen(false)}>
+      <Modal isOpen={open} onClose={() => setOpen(false)}>
         <List>
           {walletConnnectors.map((connector, index) => {
             const { text, type, isSupported } = connector;
