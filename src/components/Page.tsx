@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { Box, Fade } from "@mui/material";
 import styled from "@emotion/styled";
 
-interface Props {
+interface PageProps {
   children: ReactNode;
 }
 
@@ -13,7 +13,7 @@ const StyledBox = styled(Box)({
   alignItems:'center',
 });
 
-const Page = ({ children }: Props) => {
+const Page = ({ children }: PageProps) => {
   return (
     <Fade in>
       <StyledBox>{children}</StyledBox>
