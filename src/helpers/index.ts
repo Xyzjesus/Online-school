@@ -1,9 +1,3 @@
+const getURLQuery = (name: string) => new URLSearchParams(window.location.search).get(name);
 
-const getParamsFromUrl = (name: string) => {
-  const query = new URLSearchParams(window.location.search);
-  return query.get(name);
-};
-
-
-
-export { getParamsFromUrl };
+export { getURLQuery };
