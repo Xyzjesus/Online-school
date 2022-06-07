@@ -99,7 +99,7 @@ const HeaderDrawer = ({ open, onClose }: HeaderDrawerProps) => {
           );
         })}
         <ListItemButton sx={{ padding: 0 }} selected={location.pathname === "/"}>
-          <StyledMenuListLink to={ROUTES.actionsList} onClick={onClose}>
+          <StyledMenuListLink to={ROUTES.dashboard} onClick={onClose}>
             <ListItemText primary={t(["dashboard"])} />
           </StyledMenuListLink>
         </ListItemButton>

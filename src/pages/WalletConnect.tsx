@@ -70,7 +70,7 @@ const WalletConnect = () => {
 
   useEffect(() => {
     if (address) {
-      navigate(ROUTES.actionsList);
+      navigate(ROUTES.dashboard);
     }
   }, [address, navigate]);
 

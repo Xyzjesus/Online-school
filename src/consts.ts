@@ -3,10 +3,10 @@ import UsLogo from "assets/usa.png";
 
 const ROUTES = {
   connect: "/connect",
-  actionsList: "/",
+  dashboard: "/",
   deposit: "/deposit",
   withdraw: "/withdraw",
-  increment: "/increment",
+  mint: "/mint",
   decrement: "/decrement",
   transferOwnership: "/transfer-ownership",
 };
@@ -21,8 +21,8 @@ const ACTIONS = [
     route: ROUTES.withdraw,
   },
   {
-    key: "increment",
-    route: ROUTES.increment,
+    key: "mint",
+    route: ROUTES.mint,
   },
   {
     key: "decrement",

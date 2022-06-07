@@ -5,7 +5,7 @@ import { Context } from "context";
 import { Container } from "@mui/material";
 import styled from "@emotion/styled";
 import { ROUTES } from "consts";
-import { WalletConnect, ActionsList, Deposit, Withdraw, TransferOwnership, Decrement, Increment } from "./pages";
+import { WalletConnect, Dashboard, Deposit, Withdraw, TransferOwnership, Decrement, Mint } from "./pages";
 // import { User } from "types/types";
 // import UserList from "components/UserList";
 
@@ -34,12 +34,12 @@ function App() {
       <Header />
       <Routes>
         <Route path={ROUTES.connect} element={<WalletConnect />} />
-        <Route path={ROUTES.actionsList} element={<ActionsList />} />
+        <Route path={ROUTES.dashboard} element={<Dashboard />} />
         <Route path={ROUTES.deposit} element={<Deposit />} />
         <Route path={ROUTES.withdraw} element={<Withdraw />} />
         <Route path={ROUTES.transferOwnership} element={<TransferOwnership />} />
         <Route path={ROUTES.decrement} element={<Decrement />} />
-        <Route path={ROUTES.increment} element={<Increment />} />
+        <Route path={ROUTES.mint} element={<Mint />} />
       </Routes>
     </StyledContainer>
   );

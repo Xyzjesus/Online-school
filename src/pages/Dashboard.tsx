@@ -16,7 +16,7 @@ const StyledLink = styled(Link)({
   textDecoration: "none",
 });
 
-const ActionsList = () => {
+const Dashboard = () => {
   const { t } = useTranslation();
   return (
     <Page>
@@ -39,4 +39,4 @@ const ActionsList = () => {
   );
 };
 
-export { ActionsList };
+export { Dashboard };
