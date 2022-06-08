@@ -7,7 +7,6 @@ const ROUTES = {
   deposit: "/deposit",
   withdraw: "/withdraw",
   mint: "/mint",
-  decrement: "/decrement",
   transferOwnership: "/transfer-ownership",
 };
 
@@ -23,10 +22,6 @@ const ACTIONS = [
   {
     key: "mint",
     route: ROUTES.mint,
-  },
-  {
-    key: "decrement",
-    route: ROUTES.decrement,
   },
   {
     key: "transfer-ownership",

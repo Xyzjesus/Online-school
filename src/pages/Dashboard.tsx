@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Page } from "components";
@@ -20,21 +20,14 @@ const Dashboard = () => {
   const { t } = useTranslation();
   return (
     <Page>
-        <Typography variant='h4' textAlign='center'>{t('Hello')}</Typography>
-        <Grid maxWidth='700px' paddingTop='20px' container spacing={2}>
-          {ACTIONS.map((action) => {
-            const { key, route } = action;
-            return (
-              <Grid item xs={6} sm={6} md={4} key={key}>
-                <StyledLink to={route}>
-                  <Item>
-                    <Typography>{t([key])}</Typography>
-                  </Item>
-                </StyledLink>
-              </Grid>
-            );
-          })}
-        </Grid>
+      <Typography variant='h4' textAlign='center'>{t('Hello,')}</Typography>
+      <Grid container spacing={2} margin={10} >
+        <Grid item xs={6} md={4}>
+      <Button variant="contained">Hello World</Button>
+      </Grid>
+      </Grid>
+
+        
     </Page>
   );
 };

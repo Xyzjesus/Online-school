@@ -1,4 +1,3 @@
-export * from './Decrement'
 export * from './Mint'
 export * from './TransferOwnership'
 export * from './WalletConnect'
