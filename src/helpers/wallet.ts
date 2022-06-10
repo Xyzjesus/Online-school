@@ -1,26 +1,14 @@
-import { Address } from "ton";
+import { Address, ProviderRpcClient } from 'everscale-inpage-provider';
 
 export enum WalletConnectorType {
-  UNIVERSAL_DEEP_LINKS,
-  TON_HUB,
   BROWSER_EXTENSION,
 }
 
 export const walletConnnectors = [
   {
     type: WalletConnectorType.BROWSER_EXTENSION,
-    text: "web extension",
+    text: "Ever Wallet",
     isSupported: true,
-  },
-  {
-    type: WalletConnectorType.UNIVERSAL_DEEP_LINKS,
-    text: "universal deel-links",
-    isSupported: false,
-  },
-  {
-    type: WalletConnectorType.TON_HUB,
-    text: "ton hub",
-    isSupported: false,
   },
 ];
 
@@ -43,11 +31,22 @@ export async function connect(type: WalletConnectorType): Promise<WalletConnecto
   return res;
 }
 
+const ever = new ProviderRpcClient();
+
 const connectWithExtension = async (): Promise<WalletConnector> => {
-  const provider = (window as any).ton;
-  if (!provider) {
-    throw new Error("please install wallet extension");
+  if (!(await ever.hasProvider())) {
+    throw new Error('Extension is not installed');
   }
-  const adresses = await provider.send("ton_requestAccounts");
-  return { type: WalletConnectorType.BROWSER_EXTENSION, address: adresses[0] };
+  await ever.ensureInitialized();
+  const { accountInteraction } = await ever.requestPermissions({
+    permissions: ['basic', 'accountInteraction'],
+  });
+  if (accountInteraction == null) {
+    throw new Error('Insufficient permissions');
+  }
+  await ever.ensureInitialized();
+
+  const selectedAddress = accountInteraction.address;
+
+  return { type: WalletConnectorType.BROWSER_EXTENSION, address: selectedAddress };
 };

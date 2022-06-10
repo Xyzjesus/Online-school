@@ -1,18 +1,19 @@
 import { createContext, ReactNode, useState } from "react";
-import { Address } from "ton";
+//import { Address } from "ton";
+import { Address } from 'everscale-inpage-provider';
 
 interface State {
   address?: Address;
   updateAddress: (value?: Address) => void;
-  isTelegram: boolean;
-  setIsTelegram: (value: boolean) => void;
+  isEver: boolean;
+  setIsEver: (value: boolean) => void;
 }
 
 const Context = createContext({} as State);
 
 const ContextProvider = ({ children }: { children: ReactNode }) => {
   const [address, setAddress] = useState<Address | undefined>();
-  const [isTelegram, setIsTelegram] = useState(false)
+  const [isEver, setIsEver] = useState(false)
 
   
 
@@ -21,7 +22,7 @@ const ContextProvider = ({ children }: { children: ReactNode }) => {
     }
 
   return (
-    <Context.Provider value={{ address, updateAddress, isTelegram, setIsTelegram }}>
+    <Context.Provider value={{ address, updateAddress, isEver, setIsEver }}>
       {children}
     </Context.Provider>
   );

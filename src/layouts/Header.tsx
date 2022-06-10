@@ -109,9 +109,9 @@ const HeaderDrawer = ({ open, onClose }: HeaderDrawerProps) => {
 };
 
 const Header = () => {
-  const { address, updateAddress, isTelegram } = useContext(Context);
+  const { address, updateAddress, isEver } = useContext(Context);
   const [openMenu, setOpenMenu] = useState(false);
-  const showDrawerToggle = address && !isTelegram;
+  const showDrawerToggle = address && !isEver;
   return (
     <AppBar position="fixed">
       <Toolbar>

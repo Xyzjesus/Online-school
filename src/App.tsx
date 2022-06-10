@@ -20,7 +20,6 @@ const StyledContainer = styled(Container)({
 function App() {
   const { address } = useContext(Context);
   const navigate = useNavigate();
-  // const users: User[] = [];
 
   useEffect(() => {
     if (!address) {
