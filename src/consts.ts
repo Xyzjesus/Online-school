@@ -8,6 +8,7 @@ const ROUTES = {
   withdraw: "/withdraw",
   mint: "/mint",
   transferOwnership: "/transfer-ownership",
+  leaderboard: "/leaderboard",
 };
 
 const ACTIONS = [
@@ -26,6 +27,10 @@ const ACTIONS = [
   {
     key: "transfer-ownership",
     route: ROUTES.transferOwnership,
+  },
+  {
+    key: "leaderboard",
+    route: ROUTES.leaderboard,
   },
 ];
 
