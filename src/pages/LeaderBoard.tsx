@@ -8,7 +8,7 @@ const LeaderBoard = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("https://pure-wildwood-03252.herokuapp.com/leaderboard")
         .then((resp) => resp.json())
         .then((json) => {
             setUsers(json);

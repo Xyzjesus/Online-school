@@ -1,6 +1,7 @@
 {
   "name": "ton-web-app",
   "version": "0.0.0",
+  "homepage": "https://xyzjesus.github.io/Online-school/",
   "license": "MIT",
   "author": "",
   "dependencies": {
@@ -20,6 +21,7 @@
     "@types/react-dom": "^18.0.4",
     "@types/styled-components": "^5.1.25",
     "everscale-inpage-provider": "^0.3.13",
+    "firebase": "^9.8.3",
     "i18next": "^21.8.2",
     "i18next-browser-languagedetector": "^6.1.4",
     "node-sass": "^7.0.1",
@@ -30,7 +32,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
-    "ton": "^11.6.0",
+    "ton": "^11.15.0",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
   },

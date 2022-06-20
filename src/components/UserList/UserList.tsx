@@ -5,13 +5,13 @@ interface UserListProps {
     users: User[]
 }
 
-const UserList = ({users }: UserListProps) => {
+const UserList = ({users}: UserListProps) => {
     return (
         <div className="list">
-            {users.map(({id, name})=>
+            {users.map(({id, username, wallet_balance})=>
             // use style is bad practice => use classes 
-            <div key={name} className="list__item">
-                {id}. {name} приветствуем тебя
+            <div key={username} className="list__item">
+                {id}. {username} has {wallet_balance}
             </div>
             )}
         </div>
